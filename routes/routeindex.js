@@ -21,6 +21,8 @@ router.post('/newPost', async(req,res) => {
   
   let post = new Post(req.body);
 
+  post.post_date = Date.now();
+
   await post.save();
 
   res.redirect('/');
@@ -47,7 +49,7 @@ router.post('/editPost/:id', async(req,res) => {
   let id = req.params.id;
 
   await Post.updateOne({id},req.body);
-  
+
   res.redirect('/');
 });
 

@@ -22,7 +22,7 @@
         <% for(let i=0; i < posts.length; i++){ %>
           <div class="blog-post">
             <h2 class="blog-post-title"><%= posts[i].title %></h2>
-            <p class="blog-post-meta">November 1, 2014 by <a href="#"><%= posts[i].author %></a> </p>
+            <p class="blog-post-meta"><%= posts[i].post_date %> <a href="#"><%= posts[i].author %></a> </p>
             <p><%= posts[i].post_data %></p>
             <a class="btn btn-danger" href="/delete/<%= posts[i]._id %>"> Delete </a>
             <a class="btn btn-info" href="/edit/<%= posts[i]._id %>"> Edit </a>
